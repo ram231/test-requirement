@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"
+    />
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="row">
+        <li
+          class="draggable-box circular-border box-padding small-box white-box no-style"
+          draggable="true"
+        >
+          <h2>3,0009</h2>
+          <span>Facebook likes</span>
+        </li>
+        <li
+          class="draggable-box small-box box-padding circular-border white-box no-style"
+        >
+          <h2>342</h2>
+          <span>Youtube Subscribers</span>
+        </li>
+        <li
+          class="draggable-box small-box box-padding  circular-border white-box no-style"
+        >
+          <h2>143</h2>
+          <span>LinkedIn Followers</span>
+        </li>
+        <li
+          class="draggable-box small-box box-padding  circular-border white-box no-style"
+        >
+          <h2>3,111</h2>
+          <span>Twitter Followers</span>
+        </li>
+      </li>
+      <div class=" circular-border big-box white-box box-padding">
+        <canvas id="circularChart"></canvas>
+      </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

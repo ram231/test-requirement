@@ -49,8 +49,8 @@ body {
 
 .subtitle {
   margin: 0;
-  font-weight: 500;
-  color: #aaa;
+  font-weight: 400;
+  color: rgba(104, 104, 104, 0.667);
 }
 .title {
   margin-bottom: 10px;

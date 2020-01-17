@@ -16,38 +16,40 @@
     <div class="container">
       <ul class="row">
         <li
-          class="draggable-box circular-border box-padding small-box white-box no-style"
+          class="draggable-box state circular-border box-padding small-box white-box no-style"
           draggable="true"
         >
-          <h2>3,0009</h2>
-          <span>Facebook likes</span>
+          <h2 class="title">3,0009</h2>
+          <p class="subtitle">Facebook likes</p>
         </li>
         <li
-          class="draggable-box small-box box-padding circular-border white-box no-style"
+          class="draggable-box state small-box box-padding circular-border white-box no-style"
+          draggable="true"
         >
-          <h2>342</h2>
-          <span>Youtube Subscribers</span>
+          <h2 class="title">342</h2>
+          <p class="subtitle">Youtube Subscribers</p>
         </li>
         <li
-          class="draggable-box small-box box-padding  circular-border white-box no-style"
+          class="draggable-box state small-box box-padding  circular-border white-box no-style"
+          draggable="true"
         >
-          <h2>143</h2>
-          <span>LinkedIn Followers</span>
+          <h2 class="title">143</h2>
+          <p class="subtitle">LinkedIn Followers</p>
         </li>
         <li
-          class="draggable-box small-box box-padding  circular-border white-box no-style"
+          class="draggable-box state small-box box-padding  circular-border white-box no-style"
+          draggable="true"
         >
-          <h2>3,111</h2>
-          <span>Twitter Followers</span>
+          <h2 class="title">3,111</h2>
+          <p class="subtitle">Twitter Followers</p>
         </li>
-      </li>
-      <div class=" circular-border big-box white-box box-padding">
-        <canvas id="circularChart"></canvas>
       </ul>
+      <div class=" circular-border big-box white-box big-box-padding">
+        <canvas id="circularChart" width="30"></canvas>
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <script src="doughnut-chart.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

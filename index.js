@@ -1,27 +1,51 @@
-const ctx = document.getElementById("circularChart").getContext("2d");
-const myChart = new Chart(ctx, {
-  type: "doughnut",
-  data: {
-    labels: ["Organic Search", "Direct", "Paid Search", "Email", "Referral"],
-    datasets: [
-      {
-        label: "# of Votes",
-        data: [16028, 9324, 6177, 1228, 966],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)"
-        ],
-        borderWidth: 1,
-        borderAlign: "inner"
-      }
-    ],
-    borderAlign: "right"
-  }
-});
+function dragStart(e) {
+  this.style.opacity = "0.4";
+  dragSrcEl = this;
+  e.dataTransfer.effectAllowed = "move";
+  e.dataTransfer.setData("text/html", this.innerHTML);
+}
 
-$(function() {
-  $("#row");
+function dragEnter(e) {
+  this.classList.add("over");
+}
+
+function dragLeave(e) {
+  e.stopPropagation();
+  this.classList.remove("over");
+}
+
+function dragOver(e) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = "move";
+  return false;
+}
+
+function dragDrop(e) {
+  if (dragSrcEl != this) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData("text/html");
+  }
+  return false;
+}
+
+function dragEnd(e) {
+  var listItens = document.querySelectorAll(".draggable-box");
+  [].forEach.call(listItens, function(item) {
+    item.classList.remove("over");
+  });
+  this.style.opacity = "1";
+}
+
+function addEventsDragAndDrop(el) {
+  el.addEventListener("dragstart", dragStart, false);
+  el.addEventListener("dragenter", dragEnter, false);
+  el.addEventListener("dragover", dragOver, false);
+  el.addEventListener("dragleave", dragLeave, false);
+  el.addEventListener("drop", dragDrop, false);
+  el.addEventListener("dragend", dragEnd, false);
+}
+
+var listItens = document.querySelectorAll(".draggable-box");
+[].forEach.call(listItens, function(item) {
+  addEventsDragAndDrop(item);
 });

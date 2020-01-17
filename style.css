@@ -13,11 +13,13 @@ body {
   padding: 15px;
   margin: 15px;
 }
+.big-box-padding {
+  padding-top: 50px;
+
+  margin: 15px;
+}
 .white-box {
   background-color: white;
-}
-.row {
-  flex-direction: column;
 }
 .circular-border {
   border-radius: 0.5rem;
@@ -29,9 +31,29 @@ body {
 }
 
 .big-box {
-  height: 20rem;
-  width: 30rem;
+  height: 10rem;
+  width: 30%;
 }
 .no-style {
   list-style-type: none;
+}
+
+.row {
+  flex-direction: row;
+  margin-top: 0;
+  padding-left: 0;
+}
+.col {
+  flex-direction: column;
+}
+
+.subtitle {
+  margin: 0;
+  font-weight: 500;
+  color: #aaa;
+}
+.title {
+  margin-bottom: 10px;
+  font-weight: bolder;
+  opacity: 0.7;
 }
